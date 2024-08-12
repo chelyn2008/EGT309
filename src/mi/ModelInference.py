@@ -31,10 +31,6 @@ X_val_1 = dataframes['X_val_1']
 y_train = dataframes['y_train']
 y_val = dataframes['y_val']
 
-scores_df = pd.concat([scores_df3, scores_df4], axis = 0).sort_values(by = 'r2_score',
-                                                                      ascending = False)
-scores_df
-
 #Test the best Model on the Test Set
 y_test = pd.read_csv('playground-series-s4e5\sample_submission.csv', index_col = 'id')
 
