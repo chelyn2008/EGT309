@@ -14,7 +14,7 @@ spec:
 
     matchLabels:
 
-      chapter: services
+      app: model-training
 
   template:
 
@@ -22,7 +22,7 @@ spec:
 
       labels:
 
-        chapter: services
+        app: model-training
 
     spec:
 
@@ -32,18 +32,16 @@ spec:
 
         image: chelyn/modeltraining:latest
 
-        ports:
-
-        - containerPort: 8080
-
         volumeMounts:
 
-          - name: shared-volume
+        - name: shared-volume
 
-            mountPath: /data
+          mountPath: /data
 
       volumes:
 
-      - name: shared-volume
-
-        emptyDir: {}
+      - name: shared-storage
+        
+        persistentVolumeClaim:
+    
+            claimName: shared-pvc
