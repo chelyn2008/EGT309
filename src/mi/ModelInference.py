@@ -9,8 +9,7 @@ from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 import os
 
 # variables to trf here: 
-script_dir = os.path.dirname(__file__)
-data_dir = os.path.join(script_dir, '..', 'data')
+data_dir = '/data/'
 
 filenames = {
     'X_train_1': 'X_train_1.csv',
