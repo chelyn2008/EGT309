@@ -14,8 +14,6 @@ data_dir = os.path.join(script_dir, '..', '..', 'data')
 
 # Define the filenames
 filenames = {
-    'X_train_scaled': 'X_train_scaled.csv',
-    'X_val_scaled': 'X_val_scaled.csv',
     'X_train_1': 'X_train_1.csv',
     'X_val_1': 'X_val_1.csv',
     'y_train': 'y_train.csv',
@@ -24,8 +22,6 @@ filenames = {
 
 # Read the CSV files into dataframes
 X_test_1 = pd.read_csv(os.path.join(data_dir, 'X_test_1.csv'))
-X_train_scaled = dataframes['X_train_scaled']
-X_val_scaled = dataframes['X_val_scaled']
 X_train_1 = dataframes['X_train_1']
 X_val_1 = dataframes['X_val_1']
 y_train = dataframes['y_train']
