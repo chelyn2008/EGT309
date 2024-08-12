@@ -12,23 +12,22 @@ import os
 script_dir = os.path.dirname(__file__)
 data_dir = os.path.join(script_dir, '..', '..', 'data')
 
-# Define the filenames
 filenames = {
     'X_train_1': 'X_train_1.csv',
-    'X_val_1': 'X_val_1.csv',
     'y_train': 'y_train.csv',
-    'y_val':'y_val.csv'
+    'X_test_1':'X_test_1.csv',
+    'X_test':'X_test'
 }
 
 # Read the CSV files into dataframes
-X_test_1 = pd.read_csv(os.path.join(data_dir, 'X_test_1.csv'))
+dataframes = {key: pd.read_csv(os.path.join(data_dir, filename)) for key, filename in filenames.items()}
 X_train_1 = dataframes['X_train_1']
-X_val_1 = dataframes['X_val_1']
 y_train = dataframes['y_train']
-y_val = dataframes['y_val']
+X_test_1 = dataframes['X_test_1']
+X_test = dataframes['X_test']
 
 #Test the best Model on the Test Set
-y_test = pd.read_csv('playground-series-s4e5\sample_submission.csv', index_col = 'id')
+y_test = pd.read_csv(os.path.join(data_dir, 'sample_submission.csv', index_col = 'id'))
 
 kn_reg = KNeighborsRegressor(n_neighbors = 9)
 

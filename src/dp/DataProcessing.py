@@ -10,6 +10,11 @@ import seaborn as sns
 import warnings
 warnings.filterwarnings('ignore')
 
+import os
+
+script_dir = os.path.dirname(__file__)
+data_dir = os.path.join(script_dir, '..', '..', 'data')
+
 # Load the training and test sets
 train = pd.read_csv(os.path.join(data_dir, 'train.csv'), index_col = 'id')
 test = pd.read_csv(os.path.join(data_dir, 'train.csv'), index_col = 'id')
@@ -137,3 +142,13 @@ X_train_scaled = scaler.fit_transform(X_train_scaled)
 X_val_scaled = scaler.transform(X_val_scaled)
 X_test_scaled = scaler.transform(X_test_scaled)
 
+# exporting datasets
+X_test.to_csv(os.path.join(data_dir, 'X_test'))
+X_test_1.to_csv(os.path.join(data_dir, 'X_test_1'))
+X_test_scaled.to_csv(os.path.join(data_dir, 'X_test_scaled'))
+y_train.to_csv(os.path.join(data_dir, 'y_train'))
+X_train_1.to_csv(os.path.join(data_dir, 'X_train_1'))
+X_train_scaled.to_csv(os.path.join(data_dir, 'X_train_scaled'))
+X_val.to_csv(os.path.join(data_dir, 'X_val'))
+X_val_1.to_csv(os.path.join(data_dir, 'X_val_1'))
+X_val_scaled.to_csv(os.path.join(data_dir, 'X_val_scaled'))

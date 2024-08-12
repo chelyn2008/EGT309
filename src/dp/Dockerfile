@@ -1,10 +1,10 @@
-FROM python:3.10-slim
+FROM python:3.10
 
 # Set the working directory
 WORKDIR /src/dp
 
 # copy requirements file over
-COPY ../../requirements.txt ./
+COPY requirements.txt ./
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
