@@ -1,7 +1,7 @@
 FROM python:3.10
 
 # set a directory for the app
-WORKDIR /src/mt
+WORKDIR /usr/src/mt
 
 # copy requirements file over
 COPY requirements.txt ./

@@ -1,7 +1,7 @@
 FROM python:3.10
 
 # Set the working directory
-WORKDIR /src/dp
+WORKDIR /usr/src/dp
 
 # copy requirements file over
 COPY requirements.txt ./

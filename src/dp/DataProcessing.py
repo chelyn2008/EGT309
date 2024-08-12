@@ -13,7 +13,7 @@ warnings.filterwarnings('ignore')
 import os
 
 script_dir = os.path.dirname(__file__)
-data_dir = os.path.join(script_dir, '..', '..', 'data')
+data_dir = os.path.join(script_dir, '..', 'data')
 
 # Load the training and test sets
 train = pd.read_csv(os.path.join(data_dir, 'train.csv'), index_col = 'id')
