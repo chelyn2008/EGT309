@@ -137,6 +137,3 @@ X_train_scaled = scaler.fit_transform(X_train_scaled)
 X_val_scaled = scaler.transform(X_val_scaled)
 X_test_scaled = scaler.transform(X_test_scaled)
 
-# installing light gbm
-! pip install lightgbm
-
