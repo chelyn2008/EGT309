@@ -23,7 +23,7 @@ filenames = {
 }
 
 # Read the CSV files into dataframes
-dataframes = {key: pd.read_csv(os.path.join(data_dir, filename)) for key, filename in filenames.items()}
+X_test_1 = pd.read_csv(os.path.join(data_dir, 'X_test_1.csv'))
 X_train_scaled = dataframes['X_train_scaled']
 X_val_scaled = dataframes['X_val_scaled']
 X_train_1 = dataframes['X_train_1']
@@ -48,15 +48,3 @@ pd.DataFrame(y_pred).describe()
 y_pred = pd.Series(y_pred, index = X_test.index, name = 'predicted_proba')
 results = pd.concat([y_test, y_pred], axis = 1)
 results
-
-median = results['predicted_proba'].median()
-mean = results['predicted_proba'].mean()
-
-y_pred.plot(kind = 'hist', color = '#2CBD8F')
-plt.axvline(x = median, linestyle = '-', color = '#B136EA', label = 'median')
-plt.axvline(x = mean, linestyle = '--', color = '#EA3690', label = 'mean')
-
-plt.xlabel('predicted proba')
-plt.title('Distribution of the Flood Predicted Probability')
-plt.legend()
-plt.show()
