@@ -4,13 +4,13 @@ kind: PersistentVolumeClaim
 
 metadata:
 
-    name: shared_pvc
+    name: shared-pvc
 
 spec:
 
     accessModes:
 
-        -ReadWriteMany
+        - ReadWriteMany
 
     resources:
    
