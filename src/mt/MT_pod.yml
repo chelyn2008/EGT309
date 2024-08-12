@@ -27,7 +27,7 @@ spec:
 
     - name: shared-volume
     
-    mountPath: /data
+      mountPath: /data
 
   volumes:
 
