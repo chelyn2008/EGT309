@@ -11,8 +11,8 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Load the training and test sets
-train = pd.read_csv('data/train.csv', index_col = 'id')
-test = pd.read_csv('data/test.csv', index_col = 'id')
+train = pd.read_csv(os.path.join(data_dir, 'train.csv'), index_col = 'id')
+test = pd.read_csv(os.path.join(data_dir, 'train.csv'), index_col = 'id')
 
 # Display the shape of the data frames
 print('Shape of the:')
