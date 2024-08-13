@@ -3,45 +3,26 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-
   name: model-training
 
 spec:
-
-  replicas: 3
-
+  replicas: 1
   selector:
-
     matchLabels:
-
       app: model-training
-
   template:
-
     metadata:
-
       labels:
-
         app: model-training
-
     spec:
-
       containers:
-
       - name: model-training-container
-
         image: chelyn/modeltraining:latest
-
         volumeMounts:
-
         - name: shared-storage
-
           mountPath: /mnt/data
-
       volumes:
-
       - name: shared-storage
-        
-        persistentVolumeClaim:
-    
-            claimName: shared-pvc
+        hostPath:
+            path: /mnt/data
+            type: Directory
