@@ -16,6 +16,6 @@ spec:
 
         - ReadWriteMany
   
-    # hostPath:
+    hostPath:
 
-    #     path: /mnt/data
+        path: /mnt/data
