@@ -3,45 +3,27 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-
   name: model-inference
 
 spec:
-
-  replicas: 3
-
+  replicas: 1
   selector:
-
     matchLabels:
-
       app: model-inference
-
   template:
-
     metadata:
-
       labels:
-
         app: model-inference
-
     spec:
-
       containers:
-
       - name: model-inference-container
-
         image: anatasia/modelinference:latest
-
         volumeMounts:
-
         - name: shared-storage
-
           mountPath: /mnt/data
-
       volumes:
-
       - name: shared-storage
-        
-        persistentVolumeClaim:
-    
-            claimName: shared-pvc
+        hostpath:
+            path: /mnt/data
+            type: Directory
+            
