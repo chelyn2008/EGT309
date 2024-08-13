@@ -17,5 +17,3 @@ spec:
         requests:
   
             storage: 10Gi
-
-    volumeName: shared-pv
