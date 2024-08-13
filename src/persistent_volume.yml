@@ -16,7 +16,7 @@ spec:
 
         - ReadWriteMany
     
-    persistentVolumeReclainPolicy: Retain
+    persistentVolumeReclaimPolicy: Retain
     
     local:
         
