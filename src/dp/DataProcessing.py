@@ -11,8 +11,8 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Load the training and test sets
-train = pd.read_csv('/data/train.csv', index_col = 'id')
-test = pd.read_csv('/data/test.csv', index_col = 'id')
+train = pd.read_csv('/mnt/data/train.csv', index_col = 'id')
+test = pd.read_csv('/mnt/data/test.csv', index_col = 'id')
 
 # Display the shape of the data frames
 print('Shape of the:')
@@ -138,13 +138,13 @@ X_val_scaled = scaler.transform(X_val_scaled)
 X_test_scaled = scaler.transform(X_test_scaled)
 
 # exporting datasets
-X_test.to_csv('/data/X_test.csv')
-X_test_1.to_csv('/data/X_test_1.csv')
-X_test_scaled.to_csv('/data/X_test_scaled.csv')
-np.save('/data/y_train.npy', y_train)
-X_train_1.to_csv('/data/X_train_1.csv')
-X_train_scaled.to_csv('/data/X_train_scaled.csv')
-X_val.to_csv('/data/X_val.csv')
-X_val_1.to_csv('/data/X_val_1.csv')
-X_val_scaled.to_csv('/data/X_val_scaled.csv')
-np.save('/data/y_val.npy', y_val)
+X_test.to_csv('/mnt/data/X_test.csv')
+X_test_1.to_csv('/mnt/data/X_test_1.csv')
+X_test_scaled.to_csv('/mnt/data/X_test_scaled.csv')
+np.save('/mnt/data/y_train.npy', y_train)
+X_train_1.to_csv('/mnt/data/X_train_1.csv')
+X_train_scaled.to_csv('/mnt/data/X_train_scaled.csv')
+X_val.to_csv('/mnt/data/X_val.csv')
+X_val_1.to_csv('/mnt/data/X_val_1.csv')
+X_val_scaled.to_csv('/mnt/data/X_val_scaled.csv')
+np.save('/mnt/data/y_val.npy', y_val)
