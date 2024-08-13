@@ -6,24 +6,42 @@ metadata:
   name: model-inference
 
 spec:
+
   replicas: 1
+
   selector:
+
     matchLabels:
+
       app: model-inference
+
   template:
+
     metadata:
+
       labels:
+
         app: model-inference
+
     spec:
+
       containers:
+
       - name: model-inference-container
+      
         image: anatasia/modelinference:latest
+      
         volumeMounts:
+      
         - name: shared-storage
+      
           mountPath: /mnt/data
+      
       volumes:
+      
       - name: shared-storage
-        hostPath:
-            path: /mnt/data
-            type: Directory
+
+        persistentVolumeClaim:
+
+          claimName: shared-pvc
             
