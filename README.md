@@ -11,5 +11,4 @@ To pull github repo without repeating the cloning:
 Mounting local pc root directory (WSL) to minikube vm
 1) use `minikube start` to start the vm
 2) run `minikube mount /home/chelyn_2008/EGT309/data:/mnt/data` (format: minikube mount [local directory]:[vm directory]) 
-    - change the local directory to your local WSL data directory
-    - can be found by typing `explorer.exe .` into WSL terminal while being in cloned repo file
+    - change the local directory to your local WSL data directory (can be found by typing `explorer.exe .` into WSL terminal while being in cloned repo file)
