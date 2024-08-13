@@ -15,6 +15,13 @@ X_val_1 = pd.read_csv('/mnt/data/X_val_1.csv')
 y_train = np.load('/mnt/data/y_train.npy')
 y_val = np.load('/mnt/data/y_val.npy')
 
+print("Shape of X_train_scaled: ", X_train_scaled.shape)
+print("Shape of X_val_scaled: ", X_val_scaled.shape)
+print("Shape of X_train_1: ", X_train_1.shape)
+print("Shape of X_val_1: ", X_val_1.shape)
+print("Shape of y_train: ", y_train.shape)
+print("Shape of y_train: ", y_train.shape)
+
 # Instantiate baseline regression algorithms
 lin_reg = LinearRegression()
 kn_reg = KNeighborsRegressor()
