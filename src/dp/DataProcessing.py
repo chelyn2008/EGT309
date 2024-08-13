@@ -137,6 +137,18 @@ X_train_scaled = scaler.fit_transform(X_train_scaled)
 X_val_scaled = scaler.transform(X_val_scaled)
 X_test_scaled = scaler.transform(X_test_scaled)
 
+print("Shape of X_train_scaled: ", X_train_scaled.shape)
+print("Shape of X_val_scaled: ", X_val_scaled.shape)
+print("Shape of X_train_1: ", X_train_1.shape)
+print("Shape of X_val_1: ", X_val_1.shape)
+print("Shape of y_train: ", y_train.shape)
+print("Shape of X_test: ", X_test.shape)
+print("Shape of X_test_1: ", X_test_1.shape)
+print("Shape of X_test_scaled: ", X_test_scaled.shape)
+print("Shape of X_train_1: ", X_train_1.shape)
+print("Shape of X_val: ", X_val.shape)
+print("Shape of y_val: ", y_val.shape)
+
 # exporting datasets
 X_test.to_csv('/mnt/data/X_test.csv')
 X_test_1.to_csv('/mnt/data/X_test_1.csv')

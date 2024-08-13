@@ -20,7 +20,7 @@ print("Shape of X_val_scaled: ", X_val_scaled.shape)
 print("Shape of X_train_1: ", X_train_1.shape)
 print("Shape of X_val_1: ", X_val_1.shape)
 print("Shape of y_train: ", y_train.shape)
-print("Shape of y_train: ", y_train.shape)
+print("Shape of y_val: ", y_val.shape)
 
 # Instantiate baseline regression algorithms
 lin_reg = LinearRegression()
