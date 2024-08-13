@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: model-inference
+
+spec:
+
+  replicas: 10
+
+  selector:
+
+    matchLabels:
+
+      app: model-inference
+
+  template:
+
+    metadata:
+
+      labels:
+
+        app: model-inference
+
+    spec:
+
+      containers:
+
+      - name: model-inference-container
+
+        image: ana/modelinference:latest
+
+        volumeMounts:
+
+        - name: shared-storage
+
+          mountPath: /data
+
+      volumes:
+
+      - name: shared-storage
+        
+        persistentVolumeClaim:
+    
+            claimName: shared-pvc
