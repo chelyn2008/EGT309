@@ -23,7 +23,7 @@ spec:
           mountPath: /mnt/data
       volumes:
       - name: shared-storage
-        hostpath:
+        hostPath:
             path: /mnt/data
             type: Directory
             
