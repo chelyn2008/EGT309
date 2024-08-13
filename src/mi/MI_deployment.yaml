@@ -33,13 +33,13 @@ spec:
       
         volumeMounts:
       
-        - name: shared-pv
+        - name: shared-storage
       
           mountPath: /mnt/data
       
       volumes:
       
-      - name: shared-pv
+      - name: shared-storage
 
         persistentVolumeClaim:
 
