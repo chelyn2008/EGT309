@@ -3,31 +3,45 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
+
   name: data-processing
 
 spec:
+
   replicas: 1
+
   selector:
+
     matchLabels:
+
       app: data-processing
+
   template:
+
     metadata:
+
       labels:
+
         app: data-processing
+
     spec:
+
       containers:
+
       - name: data-processing-container
+
         image: rhiann/dataprocessing:latest
+
         volumeMounts:
-        - name: host-data
-          mountPath: /mnt/data
+
         - name: shared-storage
-          mountPath: /mnt/pv
+
+          mountPath: /mnt/data
+
       volumes:
+
       - name: shared-storage
+
         persistentVolumeClaim:
+
           claimName: shared-pvc
-      - name: host-data
-        hostPath:
-          path: /mnt/data
-          type: Directory

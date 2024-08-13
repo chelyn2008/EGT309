@@ -15,7 +15,17 @@ spec:
     accessModes:
 
         - ReadWriteMany
-  
+    
+    persistentVolumeReclainPolicy: Retain
+    
+    local:
+        
+        path: /mnt/data
+
+        storageClassName: local-storage
+
     hostPath:
+        
+        type: Directory
 
         path: /mnt/data
