@@ -3,7 +3,7 @@
 ## Follow these steps in order
 
 **Initial cloning:**
-1) on WSL terminal, just run `git clone https://github.com/chelyn2008/EGT309`
+1) on WSL terminal, type `git clone https://github.com/chelyn2008/EGT309`
 
 **To pull github repo without repeating the cloning:**
 1) Navigate to ur local file path (e.g. cd EGT309) - current name of repo
@@ -25,8 +25,9 @@
 **Deploying the PV (Persistent Volume) & PVC (Persistent Volume Claims)
 - PV and PVC for data transfer between the pods
 1) type `cd src` (following from the cd EGT309 above)
-2) type `kubectl apply -f persistent_volume.yml`
-3) you can use `kubectl get pods` to observe the pods and their statuses
+2) type `kubectl apply -f persistent_volume.yml` to run the pv
+3) type `kubectl apply -f persistent_volume_claim.yml` to run the pvc
+4) you can use `kubectl get pv` to check the PV(the status should be bound), as well as `kubectl get pvc` to check thr PVC(status should be bound)
 
 **Run the kubernetes cluster**
 - Prerequisites: ensure that docker desktop is open and github has the most recent pushes
@@ -34,4 +35,8 @@
     - type `cd dp`
     - type `kubectl apply -f DP_deployment.yaml`
     - you can use `kubectl get pods` to observe the pods and their statuses
+2) Model Training
+    - to get out of the previous dir, type `cd ..`
+    - type `cd mt`
+    - type `kubectl apply -f MT_deployment.yaml`
     
