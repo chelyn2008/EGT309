@@ -19,10 +19,15 @@ spec:
       - name: data-processing-container
         image: rhiann/dataprocessing:latest
         volumeMounts:
-        - name: shared-storage
+        - name: host-data
           mountPath: /mnt/data
+        - name: shared-storage
+          mountPath: /mnt/pv
       volumes:
       - name: shared-storage
+        persistentVolumeClaim:
+          claimName: shared-pvc
+      - name: host-data
         hostPath:
           path: /mnt/data
           type: Directory
