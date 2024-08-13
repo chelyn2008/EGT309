@@ -7,12 +7,12 @@
 
 **To pull github repo without repeating the cloning:**
 1) Navigate to ur local file path (e.g. cd EGT309) - current name of repo
-2) type `git pull origin main`
-3) it will show all changes made
+2) type `git pull origin main` (will show changes made)
 
 **Mounting local pc root directory (WSL) to minikube vm**
 1) use `minikube start` to start the vm
 2) run `minikube mount /home/chelyn_2008/EGT309/data:/mnt/data` (format: minikube mount [local directory]:[vm directory]) 
+    - local dir format `/home/[githubuser]/EGT309/data` - if you cloned the repository correctly
     - change the local directory to your local WSL data directory (can be found by typing `explorer.exe .` into WSL terminal while being in cloned repo file)
 3) if you mounted your local pc root dir, open a new WSL terminal after
 
