@@ -12,8 +12,8 @@ X_train_scaled = pd.read_csv('/data/X_train_scaled.csv')
 X_val_scaled = pd.read_csv('/data/X_val_scaled.csv')
 X_train_1 = pd.read_csv('/data/X_train_1.csv')
 X_val_1 = pd.read_csv('/data/X_val_1.csv')
-y_train = np.load('y_train.npy')
-y_val = np.load('y_val.npy')
+y_train = np.load('/data/y_train.npy')
+y_val = np.load('/data/y_val.npy')
 
 # Instantiate baseline regression algorithms
 lin_reg = LinearRegression()

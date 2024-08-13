@@ -1,15 +1,14 @@
 # EGT309
-#Instructions
-- Configure minikube directory
-1) Ensure Docker Desktop is open and running on the PC
-2) Go into WSL terminal
-3) Type in 'minikube start' to launch minikube
-4) Then type 'minikube ssh' to access the local machine terminal
-5) Type 'sudo mkdir -p /mnt/data' to create the directory
-6) Then type 'sudo chmod 777 /mnt/data' to declare the right permissions
-   - 777 refers to all; owner, group and others to have all; read, write and execute permissions
+
+Initial cloning:
+1) on WSL terminal, just run `git clone https://github.com/chelyn2008/EGT309`
 
 To pull github repo without repeating the cloning:
 1) Navigate to ur local file path (e.g. cd EGT309) - current name of repo
 2) type `git pull origin main`
 3) it will show all changes made
+
+Mounting local pc root directory (WSL) to minikube vm
+1) use `minikube start` to start the vm
+2) run `minikube mount /home/chelyn_2008/EGT309/data:/mnt/data` (format: <host directory>:<vm directory>) changing the host directory to your local WSL data directory
+   - can be found by typing `explorer.exe .` into WSL terminal.

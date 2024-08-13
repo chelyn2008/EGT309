@@ -10,7 +10,7 @@ import os
 
 # Read the CSV files into dataframes
 X_train_1 = pd.read_csv('/data/X_train_1.csv')
-y_train = np.load('y_train.npy')
+y_train = np.load('/data/y_train.npy')
 X_test_1 = pd.read_csv('/data/X_test_1.csv')
 X_test = pd.read_csv('/data/X_test.csv')
 
