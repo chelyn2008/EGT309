@@ -8,7 +8,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
 # Read the CSV files into dataframes
-X_train_scaled = np.load('/mnt/pv/y_train.npy')
+X_train_scaled = np.load('/mnt/pv/X_train_scaled.npy')
 X_val_scaled = pd.read_csv('/mnt/pv/X_val_scaled.csv')
 X_train_1 = pd.read_csv('/mnt/pv/X_train_1.csv')
 X_val_1 = pd.read_csv('/mnt/pv/X_val_1.csv')

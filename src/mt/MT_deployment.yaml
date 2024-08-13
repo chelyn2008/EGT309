@@ -23,6 +23,5 @@ spec:
           mountPath: /mnt/pv
       volumes:
       - name: shared-storage
-        hostPath:
-            path: /mnt/data
-            type: Directory
+        persistentVolumeClaim:
+          claimName: shared-pvc
