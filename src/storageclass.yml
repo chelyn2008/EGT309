@@ -2,7 +2,7 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: standard
-provisioner: kubernetes.io/no-provisioner-local
+provisioner: kubernetes.io/gce-pd
 volumeBindingMode: Immediate
 parameters:
   type: pd-standard
