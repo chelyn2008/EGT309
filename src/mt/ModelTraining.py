@@ -6,31 +6,14 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
-import os
-
-# variables to trf here: 
-data_dir = '/data/'
-
-# Define the filenames
-filenames = {
-    'X_train_scaled': 'X_train_scaled.csv',
-    'X_val_scaled': 'X_val_scaled.csv',
-    'X_train_1': 'X_train_1.csv',
-    'X_val_1': 'X_val_1.csv',
-    'y_train': 'y_train.csv',
-    'y_val':'y_val.csv'
-}
 
 # Read the CSV files into dataframes
-dataframes = {key: pd.read_csv(os.path.join(data_dir, filename)) for key, filename in filenames.items()}
-X_train_scaled = dataframes['X_train_scaled']
-X_val_scaled = dataframes['X_val_scaled']
-X_train_1 = dataframes['X_train_1']
-X_val_1 = dataframes['X_val_1']
-y_train = dataframes['y_train']
-y_val = dataframes['y_val']
-
-
+X_train_scaled = pd.read_csv('/data/X_train_scaled.csv')
+X_val_scaled = pd.read_csv('/data/X_val_scaled.csv')
+X_train_1 = pd.read_csv('/data/X_train_1.csv')
+X_val_1 = pd.read_csv('/data/X_val_1.csv')
+y_train = np.load('y_train.npy')
+y_val = np.load('y_val.npy')
 
 # Instantiate baseline regression algorithms
 lin_reg = LinearRegression()

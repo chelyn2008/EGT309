@@ -8,25 +8,14 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 import os
 
-# variables to trf here: 
-data_dir = '/data/'
-
-filenames = {
-    'X_train_1': 'X_train_1.csv',
-    'y_train': 'y_train.csv',
-    'X_test_1':'X_test_1.csv',
-    'X_test':'X_test'
-}
-
 # Read the CSV files into dataframes
-dataframes = {key: pd.read_csv(os.path.join(data_dir, filename)) for key, filename in filenames.items()}
-X_train_1 = dataframes['X_train_1']
-y_train = dataframes['y_train']
-X_test_1 = dataframes['X_test_1']
-X_test = dataframes['X_test']
+X_train_1 = pd.read_csv('/data/X_train_1.csv')
+y_train = np.load('y_train.npy')
+X_test_1 = pd.read_csv('/data/X_test_1.csv')
+X_test = pd.read_csv('/data/X_test.csv')
 
 #Test the best Model on the Test Set
-y_test = pd.read_csv(os.path.join(data_dir, 'sample_submission.csv', index_col = 'id'))
+y_test = pd.read_csv('/data/sample_submission.csv', index_col = 'id')
 
 kn_reg = KNeighborsRegressor(n_neighbors = 9)
 
