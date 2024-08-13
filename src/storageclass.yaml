@@ -4,3 +4,5 @@ metadata:
   name: standard
 provisioner: kubernetes.io/no-provisioner
 volumeBindingMode: WaitForFirstConsumer
+parameters:
+  type: pd-standard
