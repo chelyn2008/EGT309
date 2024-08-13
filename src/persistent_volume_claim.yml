@@ -18,4 +18,4 @@ spec:
   
             storage: 10Gi
 
-            volumeName: shared-pv
+    volumeName: shared-pv
