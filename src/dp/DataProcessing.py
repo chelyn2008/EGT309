@@ -4,6 +4,7 @@ import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 # Import the basic libraries
 import pandas as pd
 import numpy as np
+import matplotlib as plt
 import seaborn as sns
 
 import warnings
