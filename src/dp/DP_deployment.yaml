@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: data-processing
+
+spec:
+
+  replicas: 10
+
+  selector:
+
+    matchLabels:
+
+      app: data-processing
+
+  template:
+
+    metadata:
+
+      labels:
+
+        app: data-processing
+
+    spec:
+
+      containers:
+
+      - name: data-processing-container
+
+        image: rhian/dataprocessing:latest
+
+        volumeMounts:
+
+        - name: shared-storage
+
+          mountPath: /data
+
+      volumes:
+
+      - name: shared-storage
+        
+        persistentVolumeClaim:
+    
+            claimName: shared-pvc
