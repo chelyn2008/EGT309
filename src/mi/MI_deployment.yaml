@@ -30,7 +30,7 @@ spec:
 
       - name: model-inference-container
 
-        image: ana/modelinference:latest
+        image: anatasia/modelinference:latest
 
         volumeMounts:
 
