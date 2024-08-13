@@ -30,7 +30,7 @@ spec:
 
       - name: data-processing-container
 
-        image: rhian/dataprocessing:latest
+        image: rhiann/dataprocessing:latest
 
         volumeMounts:
 
