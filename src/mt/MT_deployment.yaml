@@ -20,7 +20,7 @@ spec:
         image: chelyn/modeltraining:latest
         volumeMounts:
         - name: shared-storage
-          mountPath: /mnt/data
+          mountPath: /mnt/pv
       volumes:
       - name: shared-storage
         hostPath:
