@@ -137,8 +137,6 @@ scores_df3 = pd.DataFrame({'model': models_names_need_scaling,
                           'mean_absolute_error': mae,
                           'root_mean_squared_error': rmse}).sort_values(by = 'r2_score',
                                                                         ascending = False).set_index('model')
-print("Models that need scaling: \n")
-print(scores_df3.to_string(index=False))
 
 train_score, test_score, r2, mae, rmse = [], [], [], [], []
 
@@ -156,11 +154,9 @@ scores_df4 = pd.DataFrame({'model': 'Decision Tree Regressor',
 # comparison between all models
 scores_df = pd.concat([scores_df3, scores_df4], axis = 0).sort_values(by = 'r2_score',
                                                                       ascending = False)
-print("Models that no need scaling: \n")
-print(scores_df4.to_string(index=False))
 
-print("Comparison between all models: \n")
-print(scores_df.to_string(index=False))
+print("Comparison between top models: \n")
+print(scores_df.show())
 
 # keep application running so other applications can run too
 while True:

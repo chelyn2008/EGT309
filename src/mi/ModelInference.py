@@ -26,8 +26,7 @@ print('Training score: %.4f' %kn_reg.score(X_train_1, y_train))
 print('Mean Absolute Error: %.4f' %mean_absolute_error(y_test, y_pred))
 print('Root Mean Squared Error: %.4f' %np.sqrt(mean_squared_error(y_test, y_pred)))
 
-pd.DataFrame(y_pred).describe()
-
 y_pred = pd.Series(y_pred, index = X_test.index, name = 'predicted_proba')
 results = pd.concat([y_test, y_pred], axis = 1)
-print(results.to_string(index=False))
+print("Results: \n")
+print(results.show())

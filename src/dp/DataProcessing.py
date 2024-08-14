@@ -62,7 +62,7 @@ max_val = [X_train[col].max() for col in X_train.columns]
 minmax_df = pd.DataFrame({'feature': X_train.columns,
                          'min_value': min_val,
                          'max_value': max_val}).set_index('feature')
-print(minmax_df.to_string(index=False))
+print(minmax_df.show())
 
 
 #feature selection
@@ -73,8 +73,7 @@ def compute_mi_scores(X, y):
     mi_scores_df = pd.DataFrame({'feature': X.columns,
                                  'mi_scores': mi_scores}).set_index('feature').sort_values(by = 'mi_scores', 
                                                                                            ascending = False)
-    print(mi_scores_df.to_string(index=False))
-
+    print(mi_scores_df.show())
 
 compute_mi_scores(X_train, y_train)
 
