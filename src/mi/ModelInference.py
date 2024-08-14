@@ -30,4 +30,4 @@ pd.DataFrame(y_pred).describe()
 
 y_pred = pd.Series(y_pred, index = X_test.index, name = 'predicted_proba')
 results = pd.concat([y_test, y_pred], axis = 1)
-results
+print(results.to_string(index=False))

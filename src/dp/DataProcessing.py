@@ -50,11 +50,9 @@ print('For the training set:')
 print('Shape of the features: ', X_train.shape)
 print('Shape of the response variable: ', y_train.shape)
 print('*'*60)
-print('*'*60)
 print('For the validation set:')
 print('Shape of the features: ', X_val.shape)
 print('Shape of the response variable: ', y_val.shape)
-print('*'*60)
 print('*'*60)
 print('For the test set:')
 print('Shape of the features: ', X_test.shape)
@@ -70,7 +68,7 @@ max_val = [X_train[col].max() for col in X_train.columns]
 minmax_df = pd.DataFrame({'feature': X_train.columns,
                          'min_value': min_val,
                          'max_value': max_val}).set_index('feature')
-minmax_df
+print(minmax_df.to_string(index=False))
 
 
 #feature selection
@@ -81,7 +79,8 @@ def compute_mi_scores(X, y):
     mi_scores_df = pd.DataFrame({'feature': X.columns,
                                  'mi_scores': mi_scores}).set_index('feature').sort_values(by = 'mi_scores', 
                                                                                            ascending = False)
-    return mi_scores_df
+    print(mi_scores_df.to_string(index=False))
+
 
 compute_mi_scores(X_train, y_train)
 
@@ -134,18 +133,6 @@ scaler = MinMaxScaler()
 X_train_scaled = scaler.fit_transform(X_train_scaled)
 X_val_scaled = scaler.transform(X_val_scaled)
 X_test_scaled = scaler.transform(X_test_scaled)
-
-print("Shape of X_train_scaled: ", X_train_scaled.shape)
-print("Shape of X_val_scaled: ", X_val_scaled.shape)
-print("Shape of X_train_1: ", X_train_1.shape)
-print("Shape of X_val_1: ", X_val_1.shape)
-print("Shape of y_train: ", y_train.shape)
-print("Shape of X_test: ", X_test.shape)
-print("Shape of X_test_1: ", X_test_1.shape)
-print("Shape of X_test_scaled: ", X_test_scaled.shape)
-print("Shape of X_train_1: ", X_train_1.shape)
-print("Shape of X_val: ", X_val.shape)
-print("Shape of y_val: ", y_val.shape)
 
 # exporting datasets
 X_test.to_csv('/mnt/data/X_test.csv')
