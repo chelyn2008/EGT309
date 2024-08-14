@@ -63,11 +63,5 @@ Any changes to the `.py` files
     - Dockerfiles are the ones with the run command for the py file
     - Rebuilding image in production env also ensures consistency and reliability
 
-**can be deleted after seen** <br>
-@rhian - pls rebuild your image and lmk again so i can try the deployments again
-
-@mathi & ana - pls help me check through the py files and all to ensure that it matches (e.g. X_train_scaled should be saved to X_train_scaled.csv I GOT SO MAD I CLDNT DEBUG THIS AND IT WAS BCOS OF ONE STUPID MISTAKE) For u guys model inf as well, can u guys also go and help me find out what the node affinity does in PV because i tried it and it literally worked so idk some magic
-
-note from chelyn - im sorry i couldn't give u guys more stuff! please lmk what i need to do for the slides and ill start it as soon as i wake up TvT
 
     
