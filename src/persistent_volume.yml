@@ -18,6 +18,8 @@ spec:
     
     persistentVolumeReclaimPolicy: Retain
 
+    storageClassName: dynamic-storage
+
     local:
         
         path: /mnt/data
