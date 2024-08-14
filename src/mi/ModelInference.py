@@ -1,10 +1,6 @@
 import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
-from sklearn.linear_model import LinearRegression
 from sklearn.neighbors import KNeighborsRegressor
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
-from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 import os
 
