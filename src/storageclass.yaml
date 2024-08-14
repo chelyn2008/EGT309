@@ -4,4 +4,4 @@ metadata:
   name: dynamic-storage
 provisioner: kubernetes.io/no-provisioner
 allowVolumeExpansion: true
-volumeBindingMode: WaitForFirstConsumer
+volumeBindingMode: Immediate
