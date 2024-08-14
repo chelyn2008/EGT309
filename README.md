@@ -18,9 +18,9 @@
 
 **Pulling docker images**
 - type `cd EGT309` to open cloned github repository
-1) Data Processing image: `git pull rhiann/dataprocessing:latest`
-2) Model Training image: `git pull chelyn/modeltraining:latest`
-3) Model Inferencd image: `git pull anatasia/modelinference:latest`
+1) Data Processing image: `docker pull rhiann/dataprocessing:latest`
+2) Model Training image: `docker pull chelyn/modeltraining:latest`
+3) Model Inferencd image: `docker pull anatasia/modelinference:latest`
 
 
 **Deploying the PV (Persistent Volume), PVC (Persistent Volume Claims) & SC(Storage Class)**
