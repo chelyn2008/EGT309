@@ -8,6 +8,8 @@ metadata:
 
 spec:
 
+    storageClassName: dynamic-storage
+    
     accessModes:
 
         - ReadWriteMany
