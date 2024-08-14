@@ -31,12 +31,6 @@ duplicates(test, 'test')
 print(train.isna().sum().any())
 print(test.isna().sum().any())
 
-#printing info summary
-train.info()
-
-#descriptive analysis
-train.describe()
-
 #define feature and target variable
 X = train.drop('FloodProbability', axis = 1)
 y = train['FloodProbability']
