@@ -44,4 +44,4 @@ spec:
 
         persistentVolumeClaim:
 
-          claimName: shared-pvc
+          claimName: shared-pvc-new
