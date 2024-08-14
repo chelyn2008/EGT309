@@ -9,10 +9,10 @@ from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 import os
 
 # Read the CSV files into dataframes
-X_train_1 = pd.read_csv('/data/X_train_1.csv')
-y_train = np.load('/data/y_train.npy')
-X_test_1 = pd.read_csv('/data/X_test_1.csv')
-X_test = pd.read_csv('/data/X_test.csv')
+X_train_1 = pd.read_csv('/mnt/data/X_train_1.csv')
+y_train = np.load('/mnt/data/y_train.npy')
+X_test_1 = pd.read_csv('/mnt/data/X_test_1.csv')
+X_test = pd.read_csv('/mnt/data/X_test.csv')
 
 #Test the best Model on the Test Set
 y_test = pd.read_csv('/data/sample_submission.csv', index_col = 'id')
