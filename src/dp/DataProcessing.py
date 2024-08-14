@@ -28,8 +28,9 @@ duplicates(train, 'training')
 duplicates(test, 'test')
 
 #compute empty cell
-print(train.isna().sum().any())
-print(test.isna().sum().any())
+print('Number of missing values')
+print('train: ', train.isna().sum().any())
+print('test: ', test.isna().sum().any())
 
 #define feature and target variable
 X = train.drop('FloodProbability', axis = 1)
@@ -62,7 +63,7 @@ max_val = [X_train[col].max() for col in X_train.columns]
 minmax_df = pd.DataFrame({'feature': X_train.columns,
                          'min_value': min_val,
                          'max_value': max_val}).set_index('feature')
-print(minmax_df.show())
+print(minmax_df.head())
 
 
 #feature selection
@@ -73,7 +74,7 @@ def compute_mi_scores(X, y):
     mi_scores_df = pd.DataFrame({'feature': X.columns,
                                  'mi_scores': mi_scores}).set_index('feature').sort_values(by = 'mi_scores', 
                                                                                            ascending = False)
-    print(mi_scores_df.show())
+    print(mi_scores_df.head())
 
 compute_mi_scores(X_train, y_train)
 
@@ -109,7 +110,7 @@ X_train_1['human_average'] = round(X_train_1[human_features].mean(axis = 1), 2)
 X_val_1['human_average'] = round(X_val_1[human_features].mean(axis = 1), 2)
 X_test_1['human_average'] = round(X_test_1[human_features].mean(axis = 1), 2)
 
-X_train_1.head()
+print(X_train_1.head())
 
 features = ['human_average', 'environmental_average', 'infrastructure_average', 'weather_average']
 

@@ -156,7 +156,7 @@ scores_df = pd.concat([scores_df3, scores_df4], axis = 0).sort_values(by = 'r2_s
                                                                       ascending = False)
 
 print("Comparison between top models: \n")
-print(scores_df.show())
+print(scores_df.head())
 
 # keep application running so other applications can run too
 while True:

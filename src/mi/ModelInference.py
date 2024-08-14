@@ -25,4 +25,4 @@ print('Root Mean Squared Error: %.4f' %np.sqrt(mean_squared_error(y_test, y_pred
 y_pred = pd.Series(y_pred, index = X_test.index, name = 'predicted_proba')
 results = pd.concat([y_test, y_pred], axis = 1)
 print("Results: \n")
-print(results.show())
+print(results.head())
