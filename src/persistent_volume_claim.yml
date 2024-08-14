@@ -4,7 +4,7 @@ kind: PersistentVolumeClaim
 
 metadata:
 
-    name: shared-pvc
+    name: shared-pvc-new
 
 spec:
 
