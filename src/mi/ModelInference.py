@@ -15,7 +15,7 @@ X_test_1 = pd.read_csv('/mnt/data/X_test_1.csv')
 X_test = pd.read_csv('/mnt/data/X_test.csv')
 
 #Test the best Model on the Test Set
-y_test = pd.read_csv('/data/sample_submission.csv', index_col = 'id')
+y_test = pd.read_csv('/mnt/data/sample_submission.csv', index_col = 'id')
 
 kn_reg = KNeighborsRegressor(n_neighbors = 9)
 
