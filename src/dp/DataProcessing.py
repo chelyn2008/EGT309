@@ -1,4 +1,5 @@
 # Import the basic libraries
+import time
 import pandas as pd
 import numpy as np
 import matplotlib as plt
@@ -157,5 +158,10 @@ X_val.to_csv('/mnt/data/X_val.csv')
 X_val_1.to_csv('/mnt/data/X_val_1.csv')
 np.save('/mnt/data/X_val_scaled.npy', X_val_scaled)
 np.save('/mnt/data/y_val.npy', y_val)
+
+# keep application running so other applications can run too
+while True:
+    print("Processing complete. Application is now continue running for 1 hour...")
+    time.sleep(3600)  # Sleep for 1 hour before the next check
 
 
