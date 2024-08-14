@@ -22,6 +22,9 @@
 2) Model Training image: `git pull chelyn/modeltraining:latest`
 3) Model Inferencd image: `git pull anatasia/modelinference:latest`
 
+**Looking at data in the PV (pods)**
+`kubectl exec -it <pod_name> -- ls /mnt/data`
+
 **Deploying the PV (Persistent Volume) & PVC (Persistent Volume Claims)**
 - PV and PVC for data transfer between the pods
 1) type `cd src` (following from the cd EGT309 above)
