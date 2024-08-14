@@ -1,3 +1,4 @@
+import time
 import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 from sklearn.linear_model import LinearRegression
@@ -155,3 +156,9 @@ scores_df4 = pd.DataFrame({'model': 'Decision Tree Regressor',
 scores_df = pd.concat([scores_df3, scores_df4], axis = 0).sort_values(by = 'r2_score',
                                                                       ascending = False)
 print("Models that no need scaling: \n", scores_df4)
+
+
+# keep application running so other applications can run too
+while True:
+    print("Processing complete. Application is now continue running for 1 hour...")
+    time.sleep(3600)  # Sleep for 1 hour before the next check
