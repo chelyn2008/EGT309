@@ -51,6 +51,7 @@
 
 **Checking the output/error for each application** 
 - `kubectl logs -f <pod_name>`
+- `kubectl exec -it <pod_name> -- /bin/bash` -> `python <python file>.py`
 
 **Checking the events, volumes and containers in a pod**
 - `kubectl describe pod <pod_name>`
