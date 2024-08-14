@@ -22,15 +22,14 @@
 2) Model Training image: `git pull chelyn/modeltraining:latest`
 3) Model Inferencd image: `git pull anatasia/modelinference:latest`
 
-**Looking at data in the PV (pods)**
-- `kubectl exec -it <pod_name> -- ls /mnt/data`
 
-**Deploying the PV (Persistent Volume) & PVC (Persistent Volume Claims)**
+**Deploying the PV (Persistent Volume), PVC (Persistent Volume Claims) & SC(Storage Class)**
 - PV and PVC for data transfer between the pods
 1) type `cd src` (following from the cd EGT309 above)
-2) type `kubectl apply -f persistent_volume.yml` to run the pv
-3) type `kubectl apply -f persistent_volume_claim.yml` to run the pvc
-4) you can use `kubectl get pv` to check the PV(the status should be bound), as well as `kubectl get pvc` to check thr PVC(status should be bound)
+2) type `kubectl apply -f storageclass.yaml` to run the storage class
+3) type `kubectl apply -f persistent_volume.yml` to run the pv
+4) type `kubectl apply -f persistent_volume_claim.yml` to run the pvc
+5) you can use `kubectl get storageclass` to check that the storage class has been created, `kubectl get pv` to check the PV(the status should be bound), as well as `kubectl get pvc` to check the PVC(status should be bound)
 
 **Run the kubernetes cluster**
 - Prerequisites: ensure that docker desktop is open and github has the most recent pushes
@@ -46,6 +45,16 @@
     - Follow the first step of the previous number
     - type `cd mi`
     - type `kubectl apply -f MI_deployment.yaml`
+  
+**Looking at data in the PV (pods)**
+- `kubectl exec -it <pod_name> -- ls /mnt/data`
+
+**Checking the output/error for each application** 
+- `kubectl logs -f <pod_name>`
+
+**Checking the events, volumes and containers in a pod**
+- `kubectl describe pod <pod_name>`
+
 
 ## Things to note (Developers)
 Any changes to the `.py` files
