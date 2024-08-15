@@ -48,6 +48,8 @@
   
 **Looking at data in the PV (pods)**
 - `kubectl exec -it <pod_name> -- ls /mnt/data`
+- OR
+- `minikube ssh` then `cd /mnt/data` then `ls -l` to view the files in mounted storage
 
 **Checking the output/error for each application** 
 - `kubectl logs -f <pod_name>`
